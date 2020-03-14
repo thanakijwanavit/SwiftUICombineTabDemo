@@ -28,6 +28,7 @@ struct TabBarControllerView: View {
                 Tab1View()
             },
         ])
+        .edgesIgnoringSafeArea(.all)
         
         
     }
@@ -35,6 +36,15 @@ struct TabBarControllerView: View {
 
 struct TabBarControllerView_Previews: PreviewProvider {
     static var previews: some View {
+       
+    Group {
         TabBarControllerView()
+        
+        //dark mode
+        TabBarControllerView()
+            .environment(\.colorScheme, .dark)
+        
+        
+        }
     }
 }
